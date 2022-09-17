@@ -13,7 +13,7 @@ public class PostsClient {
 
     public static PostsClient getINSTANCE() {
         if (null == INSTANCE)
-            INSTANCE = new PostsClient()
+            INSTANCE = new PostsClient();
         return INSTANCE;
     }
 
