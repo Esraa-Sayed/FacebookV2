@@ -3,6 +3,8 @@
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -15,6 +17,12 @@ PostViewModel postViewModel;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         postViewModel = ViewModelProviders.of(this).get(PostViewModel.class);
+        RecyclerView recyclerView = findViewById(R.id.recycler);
+        PostsAdapter adapter = new PostsAdapter();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+
+
         
     }
 }
